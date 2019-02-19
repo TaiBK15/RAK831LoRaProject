@@ -1,0 +1,138 @@
+	// char payload[256];
+	// char payload_buff[256];
+	// memset(payload, 0 sizeof payload);
+	// memset(payload_buff, 0 sizeof payload_buff);
+	// printf("RECEIVED PACKETS:: %d packets from node\n", nb_pkt );
+	// for (i=0; i < nb_pkt; ++i) {
+	// 	p = &rxpkt[i];
+
+    //     /* writing RX frequency */
+	// 	printf("RX frequency: %10u \n", p->freq_hz );
+    //     /* writing RF chain */
+	// 	printf("RF chain: %u \n", p->rf_chain);
+    //     /* writing RX modem/IF chain */
+	// 	printf("RX Modem/ IF chain: %2d\n", p->if_chain);
+    //     /* writing status */
+	// 	switch(p->status) {
+	// 		case STAT_CRC_OK:       
+	// 		printf("CRC_OK\n");
+	// 		break;
+	// 		case STAT_CRC_BAD:      
+	// 		printf("CRC_BAD\n"); 
+	// 		break;
+	// 		case STAT_NO_CRC:       
+	// 		printf("NO_CRC\n"); 
+	// 		break;
+	// 		case STAT_UNDEFINED:    
+	// 		printf("CRC UNDEF\n"); 
+	// 		break;
+	// 		default:                
+	// 		printf("CRC ERR\n");
+	// 	}
+    //     /* writing payload size */
+	// 	printf("Payload size: %3u\n", p->size);
+    //     /* writing modulation */
+	// 	switch(p->modulation) {
+	// 		case MOD_LORA:  
+	// 		printf("LORA\n"); 
+	// 		break;
+	// 		case MOD_FSK:   
+	// 		printf("FSK\n"); 
+	// 		break;
+	// 		default:        
+	// 		printf("ERR\n");
+	// 	}
+    //     /* writing bandwidth */
+	// 	switch(p->bandwidth) {
+	// 		case BW_500KHZ:     
+	// 		printf("BW: 500000\n"); 
+	// 		break;
+	// 		case BW_250KHZ:     
+	// 		printf("BW: 250000\n"); 
+	// 		break;
+	// 		case BW_125KHZ:     
+	// 		printf("BW: 125000\n"); 
+	// 		break;
+	// 		case BW_62K5HZ:     
+	// 		printf("BW: 62500 \n"); 
+	// 		break;
+	// 		case BW_31K2HZ:     
+	// 		printf("BW: 31200 \n"); 
+	// 		break;
+	// 		case BW_15K6HZ:     
+	// 		printf("BW: 15600 \n"); 
+	// 		break;
+	// 		case BW_7K8HZ:      
+	// 		printf("BW: 7800  \n"); 
+	// 		break;
+	// 		case BW_UNDEFINED:  
+	// 		printf("BW: 0     \n"); 
+	// 		break;
+	// 		default:            
+	// 		printf("BW: -1    \n");
+	// 	}
+    //     /* writing datarate */
+	// 	if (p->modulation == MOD_LORA) {
+	// 		switch (p->datarate) {
+	// 			case DR_LORA_SF7:   
+	// 			printf("datarate: \"SF7\"   \n"); 
+	// 			break;
+	// 			case DR_LORA_SF8:   
+	// 			printf("datarate: \"SF8\"   \n"); 
+	// 			break;
+	// 			case DR_LORA_SF9:   
+	// 			printf("datarate: \"SF9\"   \n"); 
+	// 			break;
+	// 			case DR_LORA_SF10:  
+	// 			printf("datarate: \"SF10\"  \n"); 
+	// 			break;
+	// 			case DR_LORA_SF11:  
+	// 			printf("datarate: \"SF11\"  \n"); 
+	// 			break;
+	// 			case DR_LORA_SF12:  
+	// 			printf("datarate: \"SF12\"  \n"); 
+	// 			break;
+	// 			default:            
+	// 			printf("datarate: \"ERR\"   \n");
+	// 		}
+	// 	} else if (p->modulation == MOD_FSK) {
+	// 		printf("datarate: \"%6u\",", p->datarate);
+	// 	} else {
+	// 		printf("datarate: \"ERR\"  ,");
+	// 	}
+    //     /* writing coderate */
+	// 	switch (p->coderate) {
+	// 		case CR_LORA_4_5:   
+	// 		printf("coderate: \"4/5\"\n"); 
+	// 		break;
+	// 		case CR_LORA_4_6:   
+	// 		printf("coderate: \"2/3\"\n"); 
+	// 		break;
+	// 		case CR_LORA_4_7:   
+	// 		printf("coderate: \"4/7\"\n"); 
+	// 		break;
+	// 		case CR_LORA_4_8:   
+	// 		printf("coderate: \"1/2\"\n"); 
+	// 		break;
+	// 		case CR_UNDEFINED:  
+	// 		printf("coderate: \"\"   \n"); 
+	// 		break;
+	// 		default:            
+	// 		printf("coderate: \"ERR\"\n");
+	// 	}
+    //     /* writing packet RSSI */
+	// 	printf("Packet RSSI: %+.0f,\n", p->rssi);
+
+    //     /* writing packet average SNR */
+	// 	printf("Average SNR: %+5.1f,\n", p->snr);
+    //     /* writing hex-encoded payload (bundled in 32-bit words) */
+	// 	for (j = 0; j < p->size; ++j) {
+	// 		if ((j > 0) && (j%4 == 0)){
+	// 			printf("-");
+	// 		}
+	// 		sprintf(payload_buff, "%02X", p->payload[j]);
+	// 		strcat(payload, payload_buff);
+	// 	}
+	// 	printf("payload: %s\n", payload);
+	// 	printf("---------------------------------------------\n");
+	// }
